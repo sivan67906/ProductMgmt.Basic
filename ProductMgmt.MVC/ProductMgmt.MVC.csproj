@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Product\Data\" />
+    <Folder Include="Areas\Product\Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="wwwroot\matrica\assets\libs\chart.js\docs\" />
+    <Folder Include="wwwroot\matrica\assets\libs\code-prettify\src\" />
+    <Folder Include="wwwroot\matrica\assets\libs\gmaps\docs\" />
+    <Folder Include="wwwroot\matrica\assets\libs\gmaps\examples\" />
+    <Folder Include="wwwroot\matrica\assets\libs\gmaps\test\" />
+    <Folder Include="wwwroot\matrica\assets\libs\litepicker\types\" />
+    <Folder Include="wwwroot\matrica\assets\libs\raphael\dev\test\" />
+    <Folder Include="wwwroot\matrica\assets\libs\starability\starability-scss\starability\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,83 @@
+﻿@model ProductMgmt.MVC.ViewModels.ProductVM;
+<div class="modal fade" id="mdlProductShow">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title mt-0" id="">Product Setup</h5>
+			</div>
+			<div class="modal-body">
+				<form action="Create">
+					<div class="row mt-3">
+						<div class="col-lg-4">Name <span class="text-danger">*</span></div>
+						<div class="col-lg-4">Description <span class="text-danger">*</span></div>
+						<div class="col-lg-4">Price <span class="text-danger">*</span></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4">
+							<input id="txtName" type="text" class="form-control" name="Name" placeholder="enter Name" value="">
+							<span asp-validation-for="Name" class="text-danger"></span>
+						</div>
+						<div class="col-lg-4">
+							<input id="txtDescription" type="text" class="form-control" name="Description" placeholder="enter Description" value="">
+							<span asp-validation-for="Description" class="text-danger"></span>
+						</div>
+						<div class="col-lg-4">
+							<input id="txtPrice" type="text" class="form-control" name="Price" placeholder="enter price" value="">
+							<span asp-validation-for="Price" class="text-danger"></span>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-lg-4">Stock Quantity <span class="text-danger">*</span></div>
+						<div class="col-lg-4">Category <span class="text-danger">*</span></div>
+						<div class="col-lg-4">SKU <span class="text-danger">*</span></div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<input id="txtStockQuantity" type="text" class="form-control" name="StockQuantity" placeholder="enter Stock Quantity" value="">
+							<span asp-validation-for="StockQuantity" class="text-danger"></span>
+						</div>
+						<div class="col-lg-4">
+							<input id="txtCategory" type="text" class="form-control" name="Category" placeholder="enter Category" value="">
+							<span asp-validation-for="Category" class="text-danger"></span>
+						</div>
+						<div class="col-lg-4">
+							<input id="txtSKU" type="text" class="form-control" name="SKU" placeholder="enter SKU" value="">
+							<span asp-validation-for="SKU" class="text-danger"></span>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-lg-4">Created Date <span class="text-danger">*</span></div>
+						<div class="col-lg-4">Updated Date <span class="text-danger">*</span></div>
+						<div class="col-lg-4"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4">
+							<input id="txtCreatedDate" type="text" class="form-control" name="CreatedDate" placeholder="enter Created Date" value="">
+							@* <span asp-validation-for="CreatedDate" class="text-danger"></span> *@
+						</div>
+						<div class="col-lg-4">
+							<input id="txtUpdatedDate" type="text" class="form-control" name="UpdatedDate" placeholder="enter Updated Date" value="">
+							@* <span asp-validation-for="UpdatedDate" class="text-danger"></span> *@
+						</div>
+						<div class="col-lg-4">
+						</div>
+					</div>
+					<div class="row mt-4 text-end ">
+						<div class="col-lg-12 ">
+							<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+							<button type="button" class="btn btn-sm btn-de-primary" data-save="modal"><i class="mdi mdi-check-all me-2"></i>Create</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts {
+	<script type="text/javascript">
+		$(window).on('load', function() {
+		 $('#mdlProductShow').modal({backdrop: 'static', keyboard: false});
+		});
+	</script>
+}
